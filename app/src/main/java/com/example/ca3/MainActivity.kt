@@ -41,9 +41,6 @@ interface ShoppingDao {
 
     @Query("SELECT * FROM shopping_items ORDER BY id ASC")
     fun getItems(): Flow<List<ShoppingItem>>
-
-    @Query("SELECT COALESCE(SUM(quantity), 0) FROM shopping_items")
-    fun getTotalItems(): Int
 }
 
 
